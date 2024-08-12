@@ -1,0 +1,1 @@
+### Connecting JS and PostgreSQL and perform operations to practice the interaction of JS with the PostgreSQL technology
