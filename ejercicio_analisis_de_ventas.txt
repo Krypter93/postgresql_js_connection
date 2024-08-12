@@ -1,0 +1,45 @@
+Ejercicio: Análisis de Ventas
+
+Descripción:
+Vas a crear un pequeño script en JavaScript que se conecte a una base de datos PostgreSQL, realice consultas, inserciones y actualizaciones para analizar datos de ventas.
+
+Requisitos:
+
+Base de Datos:
+- Crea una base de datos llamada sales_analysis.
+- Crea una tabla sales con las siguientes columnas:
+  - id (serial, primary key)
+  - product_name (varchar, not null)
+  - quantity_sold (integer, not null)
+  - sale_date (date, not null)
+  - revenue (numeric, not null)
+
+Conexión con JavaScript:
+- Utiliza el paquete pg en Node.js para conectarte a la base de datos.
+- Configura la conexión utilizando un archivo .env para manejar las variables de entorno (como las credenciales de la base de datos).
+
+Operaciones:
+
+- Inserción de Datos:
+  - Inserta al menos 5 registros de ventas en la tabla sales.
+  
+- Consultas:
+  - Recupera todas las ventas y muestra los resultados en la consola.
+  - Realiza una consulta que te dé el total de ingresos (SUM(revenue)) por cada producto.
+  - Realiza una consulta que te dé el total de ventas (COUNT(*)) realizadas en un rango de fechas específico.
+  
+- Actualización:
+  - Actualiza la cantidad vendida (quantity_sold) de un producto específico.
+  
+- Eliminación:
+  - Elimina un registro de venta específico usando su id.
+
+Desafío Adicional:
+- Crea una función que calcule y devuelva el promedio de ingresos por día (AVG(revenue)) para un mes específico.
+
+Pasos Adicionales:
+- Asegúrate de manejar las excepciones y errores durante la conexión y las operaciones con la base de datos.
+- Usa async/await para manejar las operaciones de forma asíncrona y mejorar la legibilidad del código.
+
+Objetivo del Ejercicio:
+Este ejercicio te ayudará a familiarizarte con las operaciones CRUD básicas en PostgreSQL usando JavaScript, además de practicar cómo interactuar directamente con la base de datos desde el código.
