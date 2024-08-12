@@ -32,9 +32,13 @@ const OperationsToDatabase = async () => {
 
         await client.query('INSERT INTO sales (product_name, quantity_sold, sale_date, revenue) VALUES ($1, $2, $3, $4)', ['SSD', 1800, '2024-08-11', 2570])
 
-        // Query for data inserted
+        // Recover all sales and log to console
         const result2 = await client.query('SELECT * FROM sales')
         console.log(result2.rows);
+
+        // Recover total revenue
+        const result3 = await client.query('SELECT SUM(revenue) FROM sales')
+        console.log(result3.rows);
         
         
     } catch (error) {
